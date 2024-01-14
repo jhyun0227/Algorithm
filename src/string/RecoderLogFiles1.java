@@ -1,8 +1,6 @@
 package string;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -10,7 +8,7 @@ import java.util.List;
  * 문자로 구성된 로그가 숫자 로그보다 앞에 오며, 문자 로그는 사전순으로 하고 문자가 동일할 경우에는 식별자 순서
  * 숫자 로그는 입력 순서대로
  */
-public class RecoderLogFiles {
+public class RecoderLogFiles1 {
     public static void main(String[] args) {
         long start = System.nanoTime();
         String[] strings = recoderLogFiles(new String[]{"id1 8 1 5 1", "id2 art can", "id3 3 6", "id4 own kit dig", "id5 art zero"});
