@@ -7,6 +7,10 @@ public class Reverse1 {
         char[] array = {'d', 'a', '2', 'c', 'a', 'r'};
         reverse(array);
 
+        for (char c : array) {
+            System.out.println(c);
+        }
+
         long end = System.nanoTime();
 
         System.out.println("time = " + (end - start));
@@ -16,17 +20,15 @@ public class Reverse1 {
         int start = 0;
         int end = array.length - 1;
 
+        char temp;
+
         while (start < end) {
-            char temp = array[start];
+            temp = array[start];
             array[start] = array[end];
             array[end] = temp;
 
             start++;
             end--;
-        }
-
-        for (char c : array) {
-            System.out.println(c);
         }
     }
 }
