@@ -6,7 +6,9 @@ public class TwoSumMain {
 
     public static void main(String[] args) {
 //        TwoSum1 twoSum = new TwoSum1();
-        TwoSum2 twoSum = new TwoSum2();
+//        TwoSum2 twoSum = new TwoSum2();
+//        TwoSum3 twoSum = new TwoSum3();
+        TwoSum4 twoSum = new TwoSum4();
 
         long start = System.nanoTime();
 
