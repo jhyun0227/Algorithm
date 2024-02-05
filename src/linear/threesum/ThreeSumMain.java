@@ -7,7 +7,8 @@ import java.util.List;
 public class ThreeSumMain {
 
     public static void main(String[] args) {
-        ThreeSum1 threeSum = new ThreeSum1();
+//        ThreeSum1 threeSum = new ThreeSum1();
+        ThreeSum2 threeSum = new ThreeSum2();
 
         long start = System.nanoTime();
 
