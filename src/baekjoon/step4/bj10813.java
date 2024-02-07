@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.step4;
 
 import java.io.*;
 
