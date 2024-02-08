@@ -1,37 +1,39 @@
 import java.io.*;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        StringBuilder sb = new StringBuilder();
+
         String[] firstLine = br.readLine().split(" ");
         int bagCount = Integer.parseInt(firstLine[0]);
-        int inputCount = Integer.parseInt(firstLine[1]);
+        int reverseCount = Integer.parseInt(firstLine[1]);
 
-        int[] bags = new int[bagCount];
+        for (int i = 1; i <= bagCount; i++) {
+            sb.append(i);
+        }
 
-        for (int i = 1; i <= inputCount; i++) {
-            String[] inputLine = br.readLine().split(" ");
-            int startBag = Integer.parseInt(inputLine[0]);
-            int endBag = Integer.parseInt(inputLine[1]);
-            int ballNum = Integer.parseInt(inputLine[2]);
+        for (int i = 1; i <= reverseCount; i++) {
+            String[] reverseIndex = br.readLine().split(" ");
+            int start = Integer.parseInt(reverseIndex[0]) - 1;
+            int end = Integer.parseInt(reverseIndex[1]);
 
-            for (int j = startBag - 1; j <= endBag - 1; j++) {
-                bags[j] = ballNum;
-            }
+            String reverseString = new StringBuilder(sb.substring(start, end)).reverse().toString();
+            sb.replace(start, end, reverseString);
         }
 
         br.close();
 
-        for (int i = 0; i < bags.length; i++) {
-            if (i != bags.length - 1) {
-                bw.write(bags[i] + " ");
+        for (int i = 0; i < sb.length(); i++) {
+            if (i != sb.length() -1) {
+                bw.write(sb.charAt(i) + " ");
             } else {
-                bw.write(bags[i] + "");
+                bw.write(sb.charAt(i) + "");
             }
         }
+
         bw.flush();
         bw.close();
     }
