@@ -1,7 +1,10 @@
-import java.io.*;
-import java.util.*;
+package baekjoon.step6;
 
-public class Main {
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class bj1157 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
