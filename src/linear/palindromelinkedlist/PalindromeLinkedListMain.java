@@ -6,7 +6,8 @@ import javax.swing.*;
 
 public class PalindromeLinkedListMain {
     public static void main(String[] args) {
-        PalindromeLinkedList1 palindromeLinkedList = new PalindromeLinkedList1();
+//        PalindromeLinkedList1 palindromeLinkedList = new PalindromeLinkedList1();
+        PalindromeLinkedList2 palindromeLinkedList = new PalindromeLinkedList2 ();
 
         long start = System.nanoTime();
 
