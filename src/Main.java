@@ -6,39 +6,34 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int loop = Integer.parseInt(br.readLine());
-        int result = 0;
+        int n = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < loop; i++) {
-            if (check(br.readLine())) {
-                result++;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n-i; j++) {
+                bw.write(" ");
+            }
+            for (int k = 1; k <= 2*i-1; k++) {
+                bw.write("*");
+            }
+
+            bw.write("\n");
+        }
+        for (int i = n-1; i >= 1; i--) {
+            for (int j = 1; j <= n-i; j++) {
+                bw.write(" ");
+            }
+
+            for (int k = 1; k <= 2*i-1; k++) {
+                bw.write("*");
+            }
+
+            if (i != 1) {
+                bw.write("\n");
             }
         }
 
         br.close();
-        bw.write(String.valueOf(result));
         bw.flush();
         bw.close();
-    }
-
-    private static boolean check(String word) {
-        boolean[] alphabet= new boolean[26];
-
-        //첫단어 확인
-        alphabet[word.charAt(0) - 'a'] = true;
-
-        //두번째 단어부터 체크
-        for (int i = 1; i < word.length(); i++) {
-            int now = word.charAt(i);
-            int prev = word.charAt(i - 1);
-
-            if (alphabet[now - 'a'] == false) {
-                alphabet[now - 'a'] = true;
-            } else if (now != prev) {
-                return false;
-            }
-        }
-
-        return true;
     }
 }
